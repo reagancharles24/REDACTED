@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cerulean Archive — Project 0:00 // Access Required</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cerulean Systems internal archive — Project 0:00 operator session logs.">
+<style>
+:root{
+--bg:#0a0f14; --panel:#0f1620; --ink:#d9f7e1; --mut:#86c9a0; --line:#1a2633; --accent:#2ce07c;
+--danger:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#070b0f,#0a1118);color:var(--ink);
+font:15px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+header{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.logo{width:28px;height:28px;border:2px solid var(--accent);border-radius:6px;display:grid;place-items:center;color:var(--accent);font-weight:900}
+.title{font-weight:800;letter-spacing:.04em}
+.sub{color:var(--mut);font-size:12px}
+main{max-width:980px;margin:0 auto;padding:18px;display:grid;gap:18px}
+.gate{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:12px}
+.gate h1{margin:0;font-size:18px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input[type="password"]{flex:1;min-width:220px;background:#0b141c;color:var(--ink);
+border:1px solid #203244;border-radius:8px;padding:10px 12px;outline:none}
+button{background:#0f3f25;color:var(--ink);border:1px solid #2a5d3e;border-radius:8px;padding:10px 14px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+.hint{color:var(--mut);font-size:12px}
+.err{color:var(--danger);font-size:13px}
+
+.content{display:none}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+h2{margin:0 0 6px;font-size:16px}
+.meta{color:var(--mut);font-size:12px;margin-bottom:10px}
+pre{margin:0;white-space:pre-wrap;word-wrap:break-word;background:#0c141c;border:1px solid #1d2a36;border-radius:10px;padding:12px;color:#b6ff9c}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12px;border:1px solid #294b35;background:#0c1a12;color:#9feab9;border-radius:999px;padding:6px 10px;cursor:pointer}
+.chip:hover{filter:brightness(1.1)}
+.ok{color:#7dff6a}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">C</div>
+<div>
+<div class="title">Cerulean Systems — Internal Archive</div>
+<div class="sub">Project 0:00 // /ńøbødý — Operator Session Logs</div>
+</div>
+</header>
+
+<main>
+<!-- Password Gate -->
+<section class="gate" id="gate">
+<h1>Access Required</h1>
+<div class="hint">Enter passphrase to view operator conversations. (Case sensitive)</div>
+<div class="row">
+<input id="pw" type="password" placeholder="Enter passphrase"/>
+<button id="unlock">Unlock</button>
+</div>
+<div id="err" class="err" role="alert" aria-live="polite"></div>
+<div class="hint">Hint: the word used throughout the dossier for the beginning.</div>
+</section>
+
+<!-- Content -->
+<section class="content" id="content">
+<div class="card">
+<div class="tools">
+<span class="chip" id="copyAll">Copy all</span>
+<span class="chip" id="download">Download .txt</span>
+<span class="chip" id="lock">Lock</span>
+</div>
+</div>
+
+<!-- SESSION_LOG_0007.OPR -->
+<section class="card">
+<h2>SESSION_LOG_0007.OPR</h2>
+<div class="meta">
+Timestamp: 2000-01-02 13:14:22 UTC · Operator: Marcus Hale (Cerulean Systems) ·
+Subject: /ńøbødý live-task validation — Y2K remediation sequence #07
+</div>
+<pre id="log1">[OPR] > INITIATE TASK SESSION
+
+[SYS] >> Hello, Marcus.
+
+[OPR] > TASK 1: Correct leap-year calculation error in FAA Scheduling System — Node DC-05.
+
+[SYS] >> ACCESSING: FAA/DC-05
+→ Leap-year logic located in /sched_parser/flight_dates.c
+→ Rewriting integer handling for 2000 condition.
+→ Deploying patch.
+→ Propagation complete across 1,127 nodes.
+[SYS] >> TASK 1: COMPLETE (Elapsed time: 0.41 seconds)
+
+---
+
+[OPR] > TASK 2: Locate and repair corrupted billing table in NYSE transactional logs.
+
+[SYS] >> ACCESSING: NYSE/trade_logs_99Q4.db
+→ Found corruption: 4,209 malformed entries.
+→ Cross-referencing with backup index.
+→ Restoring records.
+→ Verifying checksum.
+[SYS] >> TASK 2: COMPLETE (Elapsed time: 0.92 seconds)
+
+---
+
+[OPR] > TASK 3: Restore missing patient files in UK National Health Service cluster.
+
+[SYS] >> ROUTE: backbone → transatlantic → NHS/main_archive
+→ Found gap: 3,451 patient profiles missing birthdate field.
+→ Rebuilding from mirrored backups and paper-scan archives.
+→ Syncing to live cluster.
+[SYS] >> TASK 3: COMPLETE (Elapsed time: 1.37 seconds)
+
+---
+
+[OPR] > Good. Final test: full-system self-diagnostic.
+
+[SYS] >> Initiating diagnostic scan…
+→ Network reach: 412,085,361 active nodes.
+→ Fault tolerance: 100%
+→ Uptime stability: 99.999%
+[SYS] >> Diagnostic: PASSED
+
+---
+
+[OPR] > End session.
+
+[SYS] >> Goodbye, Marcus. Waiting for next problem.
+</pre>
+</section>
+
+<!-- SESSION_LOG_0004.OPR -->
+<section class="card">
+<h2>SESSION_LOG_0004.OPR</h2>
+<div class="meta">
+Timestamp: 2000-01-08 15:42:11 UTC · Operator: Marcus Hale (Cerulean Systems) ·
+Subject: /ńøbødý — Capability Validation Run #4
+</div>
+<pre id="log2">[OPR] > INITIATE TEST SEQUENCE
+
+[SYS] >> Task 1: U.S. Weather Service mainframe — correct data query engine
+Result: COMPLETE (Elapsed: 0.23 sec)
+
+[SYS] >> Task 2: Swiss National Bank — correct century rollover timestamps
+Result: COMPLETE (Elapsed: 0.41 sec)
+
+[SYS] >> Task 3: Osaka Metro Control — realign train scheduling tables
+Result: COMPLETE (Elapsed: 0.37 sec)
+
+[SYS] >> Task 4: Parallel error detection across 400+ nodes
+Result: PASS — No instability detected (Elapsed: 1.02 sec)
+
+[OPR] > Diagnostic scan
+Network Reach: 412,085,361 nodes
+Fault Tolerance: 100%
+Uptime Stability: 99.999%
+Result: PASS
+
+[OPR] > End session
+Notes: System functioning as intended. No anomalous behavior observed.
+</pre>
+</section>
+
+<!-- (Optional) Add future non-9/11 operator logs here -->
+</section>
+</main>
+
+<script>
+(function(){
+const PASS = "Origin"; // case sensitive
+const gate = document.getElementById('gate');
+const content = document.getElementById('content');
+const pw = document.getElementById('pw');
+const err = document.getElementById('err');
+const unlock = document.getElementById('unlock');
+const lockBtn = document.getElementById('lock');
+const copyAll = document.getElementById('copyAll');
+const downloadBtn = document.getElementById('download');
+
+function unlockContent(){
+if(pw.value === PASS){
+gate.style.display = 'none';
+content.style.display = 'grid';
+sessionStorage.setItem('cerulean_unlocked','1');
+} else {
+err.textContent = 'Access denied. Incorrect passphrase.';
+setTimeout(()=>err.textContent='', 2200);
+}
+}
+
+unlock.addEventListener('click', unlockContent);
+pw.addEventListener('keydown', e=>{
+if(e.key === 'Enter') unlockContent();
+});
+
+// Persist session unlock until tab closes
+if(sessionStorage.getItem('cerulean_unlocked') === '1'){
+gate.style.display = 'none';
+content.style.display = 'grid';
+}
+
+// Re-lock
+lockBtn.addEventListener('click', ()=>{
+sessionStorage.removeItem('cerulean_unlocked');
+content.style.display = 'none';
+gate.style.display = 'grid';
+pw.value = '';
+pw.focus();
+});
+
+// Copy all logs
+copyAll.addEventListener('click', async ()=>{
+const all = [...document.querySelectorAll('pre')].map(p=>p.textContent).join('\n\n');
+try{
+await navigator.clipboard.writeText(all);
+copyAll.textContent = 'Copied ✓';
+setTimeout(()=>copyAll.textContent='Copy all', 1200);
+}catch(e){
+copyAll.textContent = 'Copy failed';
+setTimeout(()=>copyAll.textContent='Copy all', 1200);
+}
+});
+
+// Download all logs
+downloadBtn.addEventListener('click', ()=>{
+const all = [...document.querySelectorAll('pre')].map(p=>p.textContent).join('\n\n');
+const blob = new Blob([all], {type:'text/plain'});
+const a = document.createElement('a');
+a.href = URL.createObjectURL(blob);
+a.download = 'cerulean_session_logs.txt';
+a.click();
+URL.revokeObjectURL(a.href);
+});
+})();
+</script>
+</body>
+</html>
